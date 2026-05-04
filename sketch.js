@@ -31,7 +31,11 @@ function draw() {
       let face = faces[0];
       let outerLips = [409, 270, 269, 267, 0, 37, 39, 40, 185, 61, 146, 91, 181, 84, 17, 314, 405, 321, 375, 291];
       let innerLips = [76, 77, 90, 180, 85, 16, 315, 404, 320, 307, 306, 408, 304, 303, 302, 11, 72, 73, 74, 184];
-      let allIndices = [outerLips, innerLips];
+      
+      // 畫面左側的眼睛 (在模型上對應人體的右眼) 的外圈與內圈
+      let leftEyeOuter = [130, 247, 30, 29, 27, 28, 56, 190, 243, 112, 26, 22, 23, 24, 110, 25];
+      let leftEyeInner = [33, 246, 161, 160, 159, 158, 157, 173, 133, 155, 154, 153, 145, 144, 163, 7];
+      let allIndices = [outerLips, innerLips, leftEyeOuter, leftEyeInner];
 
       stroke(255, 0, 0); // 線條顏色為紅色
       strokeWeight(1);   // 線條粗細為 1
